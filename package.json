@@ -17,6 +17,7 @@
     "sass": "^1.56.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "critters": "^0.0.16"
   }
 }

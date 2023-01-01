@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   transition: all ease 1s;
+  z-index: 1;
   #nav-wrapper {
     height: 50px;
     background-color: transparent;
@@ -11,6 +12,10 @@
     align-items: center;
     padding: 1rem 2rem;
     #nav-logo-wrapper {
+      #nav-logo{
+        width: 3rem;
+        height: 3rem;
+      }
     }
     #nav-links-wrapper {
       display: flex;
@@ -32,15 +37,15 @@
   }
 
   .unscrolledNav{
-    background-color: black !important;
+    background-color: transparent !important;
     color: white !important;
-    transition: all ease 1s;
+    transition: all ease 0.5s;
   } 
 
   .scrolledNav {
-    background-color: white !important;
-    color: black !important;
-    transition: all ease 1s;
+    background-color: black !important;
+    color: white !important;
+    transition: all ease 0.5s;
 
   }
 }
