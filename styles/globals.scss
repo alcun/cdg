@@ -1,9 +1,38 @@
+@font-face {
+  font-family: "3d-isometric";
+  src: url('/fonts/3d-isometric.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "3d-pixel";
+  src: url('/fonts/3d-pixel.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$mainColor: #c37743;
+$titleFont: '3d-pixel';
+$width: 768px;
+$bgColor: #000000;
+$fontColor: #ffffff;
+
+
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
+
 }
 
 a {
@@ -15,6 +44,8 @@ a {
   box-sizing: border-box;
 }
 
+
+
 .page-container {
   min-height: calc(100vh);
   width: 100%;
@@ -22,19 +53,19 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: aliceblue;
+  background-color: $bgColor;
+  color: $fontColor;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }
 
 [data-nextjs-scroll-focus-boundary] {
   display: contents;
